@@ -1,3 +1,9 @@
+/*
+ * This class extends Employee abstract class
+ * s
+ * 
+ * */
+
 package ObjectOrientedConcepts.Abstraction;
 
 public class AbstractExtSalary extends AbstractEmployee{
@@ -22,7 +28,13 @@ public class AbstractExtSalary extends AbstractEmployee{
 			salary = newSalary;
 		}
 	}
+
 	
+	/*
+	 * This is the definition of abstract method defined in
+	 * Employee class.
+	 * */
+	@Override
 	public double computePay(){
 		System.out.println("Computing salary pay for : "+getName());
 		return salary/52;

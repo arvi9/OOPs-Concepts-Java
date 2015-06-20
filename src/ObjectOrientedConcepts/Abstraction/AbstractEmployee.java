@@ -7,6 +7,21 @@
  * There is one way in which these can be used, by inheriting them. This is just to help a design where
  * a class needs to be created but never instantiated. 
  * 
+ * If a method is declared as abstract in this class,
+ * any class extending this will have to implement it.
+ * Infact, if a method in a class is declared as abstract:
+ * 1. class must also be abstract
+ * 2. there should be no definition of the class
+ * 
+ * APPLICATION / USAGE:
+ * 1. When you have a requirement where your base class should provide default 
+ * implementation of certain methods whereas other methods should be open to 
+ * being overridden by child classes use abstract classes.
+ * 2. The purpose of an abstract class is to provide a common definition of a 
+ * base class that multiple derived classes can share.
+ * 3. When creating a class library which will be widely distributed or reused—
+ * especially to clients, use an abstract class in preference to an interface;
+ * because, it simplifies versioning. 
  * */
 package ObjectOrientedConcepts.Abstraction;
 
@@ -22,10 +37,7 @@ public abstract class AbstractEmployee {
 		this.number = number;
 	}
 	
-	public double computePay(){
-		System.out.println("Computing pay");
-		return 0.0;
-	}
+	public abstract double computePay();
 	
 	public void mailCheck(){
 		System.out.println("Mailing check to "+this.name+" at "+this.address);
