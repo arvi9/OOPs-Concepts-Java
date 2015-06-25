@@ -5,6 +5,7 @@ public class ChildOne extends ParentOne{
 	
 	@Override
 	public void move(){
+		super.move();
 		System.out.println("Child class : Child can run and walk");
 	}
 	
